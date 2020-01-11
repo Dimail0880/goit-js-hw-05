@@ -27,7 +27,7 @@ class Car {
     turnOff() {
         this.isOn = false;
 
-        this.speed = 0; //- если  сбрасывать этой функцией скорость в ноль, то у меня не работает .decelerate
+        this.speed = 0;
     }
 
     accelerate(value) {
@@ -59,10 +59,10 @@ Car.getSpecs(mustang);
 
 mustang.decelerate(20);
 mustang.drive(1);
+Car.getSpecs(mustang);
 mustang.turnOff();
 Car.getSpecs(mustang);
-// maxSpeed: 200, speed: 30, isOn: false, distance: 130, price: 2000 ------ как скорость может быть 30 при выключенном двигателе?
-
+// maxSpeed: 200, speed: 30, isOn: false, distance: 130, price: 2000 
 console.log(mustang.price); // 2000
 mustang.price = 4000;
 console.log(mustang.price); // 4000
